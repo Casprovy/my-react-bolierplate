@@ -1,3 +1,6 @@
+const CleanWebpackPlugin = require('clean-webpack-plugin')
+const HtmlWebPackPlugin = require('html-webpack-plugin')
+
 const path = require('path')
 
 module.exports = {
@@ -12,7 +15,7 @@ module.exports = {
     rules: [
       {
         test: /\.js$/,
-        exclude: ['node_modules'],
+        exclude: /node_modules/,
         use: [{loader: 'babel-loader'}],
       },
       {
@@ -30,7 +33,13 @@ module.exports = {
   plugins: [
     new HtmlWebPackPlugin({
       template: 'index.html'
-    })
-  ]
+    }),
+    new CleanWebpackPlugin(),
+  ],
+  devServer: {
+    host: 'localhost',
+    port: 3000,
+    open: true,
+  }
 }
 

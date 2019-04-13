@@ -1,12 +1,13 @@
 {
   "name": "my-react-boilerplate",
   "version": "1.0.0",
-  "description": "",
+  "description": "react-boilerplate",
   "main": "index.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
+    "start": "webpack-dev-server",
     "test": "jest ./test"
   },
   "author": "",
@@ -15,6 +16,10 @@
     "acorn": "^6.1.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Casprovy/my-react-bolierplate.git"
   },
   "jest": {
     "setupTestFrameworkScriptFile": "./test/enzyme.setup.js"
@@ -35,6 +40,9 @@
     "react-test-renderer": "^16.8.6",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
-    "webpack": "^4.30.0"
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.0",
+    "webpack-dev-server": "^3.3.1",
+    "webpack-merge": "^4.2.1"
   }
 }
